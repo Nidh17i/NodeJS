@@ -18,9 +18,23 @@ app.get("/contact", (req, res) => {
 
         `);
 });
-const filepath=path.join(__dirname,'public','index.html')
-console.log(filepath);
 
+app.get('/profile',(req,res)=>{
+  console.log(req.query);
+  console.log(req.query.search);
+  res.send(`<h1>user search for products ${req.query.search} </h1>`)
+})
+
+
+// const filepath=path.join(__dirname,'public','index.html')
+// console.log(filepath);
+
+
+
+app.get('/username/:id',(req,res)=>{
+  console.log(req.params.id);
+  res.send(`<h1> hii </h1>`)
+})
 
 const PORT = 8080;
 
