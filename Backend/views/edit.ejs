@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+     <title>Document</title>
+        <!-- <link rel="stylesheets" href="../public/stylesheets/style.css" --> 
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>-->
+       
+     </head>
+<body>
+    
+
+
+
+
+    <div>
+        <h1>updated Student</h1>
+        <form action="/updated/<%= student._id%>"method="post">
+            <input  type="text"placeholder="enter username" name="name" value="<%= student.name%>">username</input>
+            <br><br>
+            <input  type="text"placeholder="email"name='email' value="<%= student.email%>">email</input>
+             <br><br>
+            <input  type="password",placeholder="password" name="password" value="<%= student.password%>">password</input>
+             <br><br>
+             <button>updated</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

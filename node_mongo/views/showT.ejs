@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teacher List</h1>
+    <div>
+       <ul>
+   <%  Teacher.map((teach)=>{ %>
+    <li>
+    <p> Name: <%= teach.name %></p>
+    <p> Subject: <%= teach.subject %></p>
+    <div>
+   <a href="/teacher/<%= teach._id %>"> <button >Edit</button></a>
+   <a href="/teacher/<%= teach._id %>"> <button>delete</button></a>
+    </div>
+     </li>
+    <%})%>
+    </ul>
+    </div>
+</body>
+</html>
