@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 dotenv.config();
 import { User } from './src/models/user.js';
+import { authRoutes } from './src/routes/auth.routes.js';
 
 
 const app=express();
@@ -52,7 +53,7 @@ app.get('/student/:id',async (req,res)=>{
     res.redirect('/read')
 })
 
-
+app.use(authRoutes)
 
 const PORT=3000;
 
